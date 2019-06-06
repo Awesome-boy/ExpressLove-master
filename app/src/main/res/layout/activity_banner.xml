@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BannerActivity">
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_oval_radius"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/speaker" />
+
+        <com.gongwen.marqueen.SimpleMarqueeView
+            android:id="@+id/marqueeView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inAnimation="@anim/in_right"
+            android:outAnimation="@anim/out_left"
+            app:smvTextColor="@color/white"
+            app:smvTextEllipsize="end"
+            app:smvTextGravity="center_vertical"
+            app:smvTextSingleLine="true"
+            app:smvTextSize="15sp"></com.gongwen.marqueen.SimpleMarqueeView>
+
+    </LinearLayout>
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>
